@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Appointment Request - Paradise Dental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!--[if mso]>
+    <style type="text/css">
+        body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Prompt', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #F3F4F6; line-height: 1.6;">
+    <!-- Wrapper Table -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #F3F4F6; padding: 40px 20px;">
+        <tr>
+            <td align="center">
+                <!-- Main Container -->
+                <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #FFFFFF; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+                    
+                    <!-- Header Banner -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #214491 0%, #2D7C9C 100%); padding: 40px 40px 30px; text-align: center;">
+                            <!-- Logo/Brand -->
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                        <div style="width: 60px; height: 60px; background-color: rgba(255,255,255,0.2); border-radius: 12px; margin-bottom: 20px; display: inline-block; line-height: 60px;">
+                                            <span style="font-size: 28px; color: #FFFFFF;">🦷</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1 style="color: #FFFFFF; font-size: 28px; font-weight: 700; margin: 0 0 8px; font-family: 'Prompt', sans-serif;">
+                                            New Appointment Request
+                                        </h1>
+                                        <p style="color: #CEE0F3; font-size: 16px; margin: 0; font-family: 'Prompt', sans-serif;">
+                                            Paradise Dental Clinic
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Reference ID Badge -->
+                    <tr>
+                        <td style="padding: 30px 40px 0;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                        <div style="display: inline-block; background-color: #CEE0F3; color: #214491; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; font-family: 'Prompt', sans-serif;">
+                                            Reference: {{requestId}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Patient Information Section -->
+                    <tr>
+                        <td style="padding: 30px 40px 20px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #F9FAFB; border-left: 4px solid #2D7C9C; border-radius: 0 8px 8px 0;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <h2 style="color: #214491; font-size: 18px; font-weight: 600; margin: 0 0 16px; font-family: 'Prompt', sans-serif;">
+                                            📋 Patient Information
+                                        </h2>
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB;">
+                                                    <span style="color: #6B7280; font-size: 14px; font-family: 'Prompt', sans-serif;">Name</span>
+                                                </td>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB; text-align: right;">
+                                                    <strong style="color: #1F2937; font-size: 14px; font-family: 'Prompt', sans-serif;">{{patientName}}</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB;">
+                                                    <span style="color: #6B7280; font-size: 14px; font-family: 'Prompt', sans-serif;">Phone</span>
+                                                </td>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB; text-align: right;">
+                                                    <a href="tel:{{patientPhone}}" style="color: #2D7C9C; font-size: 14px; font-family: 'Prompt', sans-serif; text-decoration: none; font-weight: 500;">{{patientPhone}}</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <span style="color: #6B7280; font-size: 14px; font-family: 'Prompt', sans-serif;">Email</span>
+                                                </td>
+                                                <td style="padding: 8px 0; text-align: right;">
+                                                    <a href="mailto:{{patientEmail}}" style="color: #2D7C9C; font-size: 14px; font-family: 'Prompt', sans-serif; text-decoration: none; font-weight: 500;">{{patientEmail}}</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Appointment Details Section -->
+                    <tr>
+                        <td style="padding: 0 40px 20px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #F9FAFB; border-left: 4px solid #214491; border-radius: 0 8px 8px 0;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <h2 style="color: #214491; font-size: 18px; font-weight: 600; margin: 0 0 16px; font-family: 'Prompt', sans-serif;">
+                                            📅 Requested Appointment
+                                        </h2>
+                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB;">
+                                                    <span style="color: #6B7280; font-size: 14px; font-family: 'Prompt', sans-serif;">Date</span>
+                                                </td>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB; text-align: right;">
+                                                    <strong style="color: #1F2937; font-size: 14px; font-family: 'Prompt', sans-serif;">{{preferredDate}}</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB;">
+                                                    <span style="color: #6B7280; font-size: 14px; font-family: 'Prompt', sans-serif;">Time</span>
+                                                </td>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #E5E7EB; text-align: right;">
+                                                    <strong style="color: #1F2937; font-size: 14px; font-family: 'Prompt', sans-serif;">{{preferredTime}}</strong>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <span style="color: #6B7280; font-size: 14px; font-family: 'Prompt', sans-serif;">Service</span>
+                                                </td>
+                                                <td style="padding: 8px 0; text-align: right;">
+                                                    <span style="display: inline-block; background-color: #214491; color: #FFFFFF; padding: 4px 12px; border-radius: 12px; font-size: 13px; font-family: 'Prompt', sans-serif; font-weight: 500;">{{serviceType}}</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Notes Section (Conditional) -->
+                    {{#if notes}}
+                    <tr>
+                        <td style="padding: 0 40px 20px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #FFF7ED; border-left: 4px solid #F59E0B; border-radius: 0 8px 8px 0;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <h3 style="color: #92400E; font-size: 16px; font-weight: 600; margin: 0 0 12px; font-family: 'Prompt', sans-serif;">
+                                            📝 Additional Notes
+                                        </h3>
+                                        <p style="color: #78350F; font-size: 14px; margin: 0; font-family: 'Prompt', sans-serif; line-height: 1.6;">
+                                            {{notes}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{/if}}
+
+                    <!-- Action Button -->
+                    <tr>
+                        <td style="padding: 10px 40px 30px; text-align: center;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                                <tr>
+                                    <td style="background: linear-gradient(135deg, #2D7C9C 0%, #214491 100%); border-radius: 8px;">
+                                        <a href="{{adminUrl}}/admin/appointments" 
+                                           style="display: inline-block; padding: 16px 40px; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none; font-family: 'Prompt', sans-serif;">
+                                            View in Admin Panel →
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 40px;">
+                            <div style="border-top: 1px solid #E5E7EB;"></div>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; text-align: center; background-color: #F9FAFB;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <p style="color: #214491; font-size: 16px; font-weight: 600; margin: 0 0 8px; font-family: 'Prompt', sans-serif;">
+                                            Paradise Dental Clinic
+                                        </p>
+                                        <p style="color: #6B7280; font-size: 13px; margin: 0 0 4px; font-family: 'Prompt', sans-serif;">
+                                            123 Sukhumvit Road, Bangkok 10110, Thailand
+                                        </p>
+                                        <p style="color: #6B7280; font-size: 13px; margin: 0 0 4px; font-family: 'Prompt', sans-serif;">
+                                            📞 (02) 123-4567 &nbsp;|&nbsp; 📧 info@paradisedental.com
+                                        </p>
+                                        <p style="color: #9CA3AF; font-size: 11px; margin: 16px 0 0; font-family: 'Prompt', sans-serif;">
+                                            This is an automated notification. Please do not reply to this email.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- End Main Container -->
+            </td>
+        </tr>
+    </table>
+    <!-- End Wrapper -->
+</body>
+</html>

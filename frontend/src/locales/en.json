@@ -1,0 +1,806 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "contact": "Contact",
+        "login": "Login",
+        "logout": "Logout",
+        "bookAppointment": "Book Appointment"
+    },
+    "appointmentForm": {
+        "editTitle": "Edit Appointment",
+        "newTitle": "New Appointment",
+        "patientLabel": "Patient *",
+        "searchPlaceholder": "Search patient by Name or HN...",
+        "dateLabel": "Date *",
+        "startLabel": "Start *",
+        "endLabel": "End *",
+        "serviceTypeLabel": "Service Type *",
+        "selectServicePlaceholder": "Select Service",
+        "dentistLabel": "Dentist",
+        "anyDentist": "Any Available Dentist",
+        "statusLabel": "Status",
+        "notesLabel": "Notes",
+        "notesPlaceholder": "Additional notes...",
+        "deleteButton": "Delete",
+        "errors": {
+            "patientRequired": "Patient is required",
+            "dateRequired": "Date is required",
+            "startTimeRequired": "Start time is required",
+            "endTimeRequired": "End time is required",
+            "endTimeAfterStart": "End time must be after start time",
+            "serviceTypeRequired": "Service type is required",
+            "patientRequiredForCheckIn": "Please select a patient before checking in."
+        }
+    },
+    "dashboard": {
+        "title": "Dashboard"
+    },
+    "hero": {
+        "tagline": "A New Standard in Dental Care",
+        "title_part1": "Your Smile is Our",
+        "title_part2": "Priority",
+        "description": "Experience exceptional dental care in a modern, comfortable environment. Our expert team is dedicated to providing you with the highest quality service.",
+        "cta_primary": "Book Appointment",
+        "cta_secondary": "Consult via Line",
+        "trust_1": "Advanced Equipment",
+        "trust_2": "Specialist Dentists",
+        "trust_3": "Transparent Pricing"
+    },
+    "welcome": {
+        "title": "Why Trust Paradise Dental?",
+        "col1_title": "Specialist Dentists",
+        "col1_desc": "Cared for by Dr. Phinyada and our expert team. Precise facial structure analysis.",
+        "col2_title": "Relaxing Atmosphere",
+        "col2_desc": "Erase old fears. Café-style clinic design. Clean, safe, comfortable every visit.",
+        "col3_title": "Transparent Pricing",
+        "col3_desc": "Price quoted before treatment. Social security accepted. Payment plans available for orthodontics.",
+        "p1": "At Paradise Dental, we believe that a healthy smile is the gateway to a happier life. Our mission is to provide exceptional dental care in a comfortable, friendly, and modern environment where your well-being comes first.",
+        "p2": "We combine cutting-edge dental technology with compassionate, personalized care to ensure every patient feels valued. Whether you are visiting for a routine checkup or a complex procedure, our team is here to support you every step of the way.",
+        "p3": "Serving our community with professional dental services in both Thai and English, we are committed to making quality dental care accessible to everyone."
+    },
+    "about": {
+        "hero": {
+            "tagline": "Our Story",
+            "title_part1": "About",
+            "title_part2": "Paradise Dental",
+            "description": "Dedicated to providing exceptional dental care in a comfortable, friendly, and modern environment since 2010.",
+            "cta_primary": "Our Mission",
+            "cta_secondary": "Meet The Team",
+            "trust_1": "Experienced",
+            "trust_2": "Modern",
+            "trust_3": "Compassionate"
+        },
+        "mission": {
+            "title": "Our Mission",
+            "p1": "At Paradise Dental Clinic, our mission is to provide exceptional dental care in a comfortable, friendly, and modern environment. We believe that a healthy smile is a gateway to a happier life.",
+            "p2": "We are committed to staying at the forefront of dental innovation while maintaining the personal touch that makes our patients feel like family.",
+            "p3": "Serving our community in both Thai and English, we strive to make quality dental care accessible and comfortable for everyone."
+        },
+        "values": {
+            "title": "Our Core Values",
+            "subtitle": "The principles that guide our care every day",
+            "excellence": {
+                "title": "Excellence",
+                "desc": "We pursue the highest standards in dental care, continuously updating our skills and technology."
+            },
+            "compassion": {
+                "title": "Compassion",
+                "desc": "Our caring team creates a warm, supportive environment where your comfort comes first."
+            },
+            "innovation": {
+                "title": "Innovation",
+                "desc": "We embrace modern dental technology to deliver safer, faster, and more comfortable treatments."
+            },
+            "integrity": {
+                "title": "Integrity",
+                "desc": "We build trust through honest communication, transparent pricing, and ethical practices."
+            }
+        },
+        "team": {
+            "title": "Meet Our Team",
+            "subtitle": "Expert professionals dedicated to your smile",
+            "member1": {
+                "name": "Dr. Somchai Prasert",
+                "role": "Lead Dentist",
+                "bio": "Specialize in smile makeovers and implant dentistry with over 15 years of experience."
+            },
+            "member2": {
+                "name": "Dr. Emily Chen",
+                "role": "Cosmetic Specialist",
+                "bio": "Brings artistic vision to dental aesthetics, helping patients achieve their dream smiles."
+            },
+            "member3": {
+                "name": "Kannika Saetang",
+                "role": "Dental Hygienist",
+                "bio": "Specializes in preventive care and patient education with a gentle, comforting touch."
+            },
+            "member4": {
+                "name": "David Thompson",
+                "role": "Orthodontist",
+                "bio": "Dedicated to creating perfectly aligned smiles with traditional braces and clear aligners."
+            }
+        }
+    },
+    "services": {
+        "hero": {
+            "tagline": "World Class Care",
+            "title_part1": "Our",
+            "title_part2": "Dental Services",
+            "description": "Comprehensive, world-class dental care tailored to your unique needs using the latest technology.",
+            "cta_primary": "Book Appointment",
+            "cta_secondary": "View Treatments",
+            "trust_1": "General",
+            "trust_2": "Cosmetic",
+            "trust_3": "Surgical"
+        },
+        "title": "Complete Smile Care Services",
+        "subtitle": "Comprehensive dental care for your beautiful smile",
+        "general": {
+            "title": "General Dentistry & Treatment",
+            "desc": "Scaling / Filling / Root Canal / Wisdom Tooth Extraction"
+        },
+        "cosmetic": {
+            "title": "Cosmetic Dentistry",
+            "desc": "Veneers / Teeth Whitening / Gap Closure"
+        },
+        "ortho": {
+            "title": "Orthodontics",
+            "desc": "Metal Braces / Clear Aligners (Invisalign) / Jaw Correction"
+        },
+        "care": {
+            "title": "Tooth Replacement",
+            "desc": "Implants / Dentures / Crowns"
+        },
+        "implants": {
+            "title": "Dental Implants",
+            "desc": "Replace missing teeth with durable, natural-looking dental implants."
+        },
+        "root_canal": {
+            "title": "Root Canal Therapy",
+            "desc": "Save infected or damaged teeth with gentle, effective endodontic treatment."
+        },
+        "periodontics": {
+            "title": "Periodontics",
+            "desc": "Treat and prevent gum disease with specialized periodontal care."
+        },
+        "oral_surgery": {
+            "title": "Oral Surgery",
+            "desc": "Expert surgical care for tooth extractions, wisdom teeth removal, and other procedures."
+        },
+        "pediatric": {
+            "title": "Pediatric Dentistry",
+            "desc": "Gentle, fun dental care designed specifically for children."
+        },
+        "view_all": "View All Services"
+    },
+    "pricing": {
+        "title": "Start Your Dental Care Today... Choose Your Package",
+        "subtitle": "Online booking system - convenient, no waiting required!",
+        "health": {
+            "badge": "Health Package",
+            "title": "General Oral Health Care",
+            "items": "Scaling + Filling + Check-up",
+            "price": "Special Price",
+            "priceAmount": "2,990",
+            "bookingNote": "📅 Book Scaling Appointment (Online booking available)"
+        },
+        "orthodontics": {
+            "badge": "New Smile Package",
+            "title": "Orthodontics (Braces)",
+            "subtitle": "Best Seller",
+            "items": "Initial Braces Installation",
+            "price": "Starting from",
+            "priceAmount": "15,990",
+            "includes": "Free! X-Ray + Impression + Photos (Value 3,xxx)",
+            "installment": "10 months installment available",
+            "bookingNote": "📅 Book Orthodontic Consultation (Online booking available)"
+        },
+        "whitening": {
+            "badge": "Bright Package",
+            "title": "Teeth Whitening",
+            "items": "Teeth Whitening (Cool Light/Zoom)",
+            "price": "Special",
+            "details": "Whiter teeth after treatment",
+            "discount": "Special Discount 20%",
+            "bookingNote": "📅 Book Whitening Appointment (Online booking available)"
+        }
+    },
+    "reviews": {
+        "title": "Trusted by Real Patients",
+        "subtitle": "Transformation stories from our patients",
+        "beforeAfter": "Before / After",
+        "testimonials": {
+            "title": "Patient Reviews",
+            "review1": {
+                "name": "Somying K.",
+                "service": "Clear Aligners",
+                "text": "Very gentle dentist, no pain at all. Clean clinic, great atmosphere, lovely staff. Highly recommend!",
+                "rating": 5
+            },
+            "review2": {
+                "name": "Wittaya S.",
+                "service": "Dental Implants",
+                "text": "Beautiful modern clinic with complete equipment. Doctor gave excellent consultation and clear explanations.",
+                "rating": 5
+            },
+            "review3": {
+                "name": "Napassorn P.",
+                "service": "Teeth Whitening",
+                "text": "Teeth really got whiter, clear results. Affordable price, great value. Excellent service.",
+                "rating": 5
+            },
+            "review4": {
+                "name": "Prasert W.",
+                "service": "Filling",
+                "text": "Kind doctor who explains every step. Not rushed, detailed work. Very impressed.",
+                "rating": 5
+            },
+            "review5": {
+                "name": "Sudarat M.",
+                "service": "Scaling",
+                "text": "Excellent service, no waiting. Clean, friendly. Already recommended to many friends.",
+                "rating": 5
+            }
+        }
+    },
+    "contact": {
+        "hero": {
+            "title_part1": "Get in",
+            "title_part2": "Touch",
+            "description": "We're here to help. Reach out to us for appointments, inquiries, or any questions about our dental services."
+        },
+        "phone": "Phone",
+        "email": "Email",
+        "location": "Location",
+        "hours": "Office Hours",
+        "parking": "Parking Available",
+        "parking_desc": "Free parking available in building basement. Entrance on Soi 15.",
+        "monday_friday": "Monday - Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "closed": "Closed",
+        "cta_title": "Ready to book your appointment?",
+        "cta_subtitle": "Schedule your visit today and experience premium dental care.",
+        "cta_button": "Book Appointment",
+        "address_title": "Address",
+        "call_now": "Call Us Now",
+        "open_tue_sun": "Tuesday - Sunday",
+        "monday": "Monday",
+        "public_holidays": "Public Holidays",
+        "public_holidays_status": "Closed",
+        "address_line1": "63/1-2 Soi 4, Thetsaban 3 Rd.,",
+        "address_line2": "Thang Kwian, Klaeng District,",
+        "address_line3": "Rayong 21110"
+    },
+    "footer": {
+        "about_title": "About Us",
+        "about_description": "Paradise Dental Clinic provides comprehensive dental care with experienced specialists and modern technology, dedicated to your beautiful smile and healthy teeth.",
+        "quick_links_title": "Quick Links",
+        "links": {
+            "home": "Home",
+            "services": "Services",
+            "about": "About",
+            "contact": "Contact",
+            "booking": "Booking"
+        },
+        "contact_title": "Contact Us",
+        "address": "63/1-2 Soi 4, Tesaban 3 Rd., Thang Kwian, Klaeng, Rayong",
+        "phone": "088-665-1546",
+        "line_button": "Add Line",
+        "facebook_button": "Visit Page",
+        "hours_title": "Business Hours",
+        "hours_weekday": "Mon-Fri: 09:00-18:00",
+        "hours_weekend": "Sat-Sun: 09:00-17:00",
+        "copyright": "© 2025 Paradise Dental Clinic. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "booking": {
+        "title": "Book Your Appointment",
+        "subtitle": "Fill out the form below and we will get back to you to confirm your appointment.",
+        "form": {
+            "name": "Full Name",
+            "namePlaceholder": "Enter your name",
+            "phone": "Phone Number",
+            "phonePlaceholder": "02-123-4567",
+            "email": "Email Address",
+            "emailPlaceholder": "Enter your email",
+            "date": "Preferred Date",
+            "time": "Preferred Time",
+            "timePlaceholder": "Select time",
+            "service": "Service Type",
+            "servicePlaceholder": "Select service",
+            "notes": "Additional Notes (Optional)",
+            "notesPlaceholder": "Any specific concerns or requests?",
+            "submit": "Request Appointment",
+            "submitting": "Submitting...",
+            "success": "Appointment Request Sent!",
+            "successMessage": "We have received your request and will contact you shortly to confirm."
+        },
+        "successPage": {
+            "title": "Appointment Request Received!",
+            "subTitle": "Thank you for choosing Paradise Dental",
+            "reference": "Reference Number",
+            "summaryTitle": "Appointment Summary",
+            "name": "Name",
+            "date": "Preferred Date",
+            "time": "Preferred Time",
+            "service": "Service Type",
+            "nextStepsTitle": "What's Next?",
+            "nextStepsMessage": "Our team will contact you within 24 hours to confirm your appointment and discuss any additional details.",
+            "returnHome": "Return to Home"
+        },
+        "services": {
+            "general": "General Checkup",
+            "cleaning": "Teeth Cleaning",
+            "cosmetic": "Cosmetic Dentistry",
+            "ortho": "Orthodontics",
+            "implants": "Dental Implants",
+            "other": "Other"
+        },
+        "errors": {
+            "required": "This field is required",
+            "email": "Invalid email address",
+            "phone": "Invalid phone format (e.g., 02-123-4567)",
+            "date": "Date cannot be in the past"
+        }
+    },
+    "staffDashboard": {
+        "menu": "Menu",
+        "welcome": "Welcome, {{name}}!",
+        "accessTools": "Access your clinic management tools from the menu.",
+        "myProfile": "My Profile",
+        "staffId": "Staff ID:",
+        "username": "Username",
+        "email": "Email Address",
+        "noEmail": "No email provided",
+        "comingSoon": "Dashboard Widgets Coming Soon",
+        "comingSoonDesc": "Charts, daily summaries, and quick actions will appear here.",
+        "nav": {
+            "dashboard": "Dashboard",
+            "queue": "Queue Management",
+            "patients": "Patient Records",
+            "calendar": "Calendar",
+            "appointmentSchedule": "Appointment Schedule",
+            "treatments": "Treatments",
+            "billing": "Billing",
+            "expenses": "Expenses & Inventory",
+            "reports": "Reports",
+            "services": "Service Management",
+            "admin": "Admin Tools",
+            "soon": "SOON"
+        },
+        "role": {
+            "admin": "Admin",
+            "manager": "Manager",
+            "dentist": "Dentist",
+            "staff": "Staff",
+            "patient": "Patient"
+        },
+        "updateStatus": {
+            "title": "Update Status",
+            "requestNum": "Request #",
+            "selectStatus": "Select New Status",
+            "status": {
+                "pending": "Pending",
+                "contacted": "Contacted",
+                "confirmed": "Confirmed",
+                "cancelled": "Cancelled",
+                "completed": "Completed"
+            },
+            "confirmMessage": "Are you sure you want to change the status of",
+            "confirmMessageEnd": "'s request?",
+            "cancel": "Cancel",
+            "confirm": "Confirm Update",
+            "updating": "Updating...",
+            "scheduleAppointment": "Schedule Appointment",
+            "scheduleNote": "This will create an appointment in the calendar.",
+            "assignDentist": "Assign Dentist",
+            "selectDentist": "-- Select Dentist --",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "appointmentDate": "Appointment Date",
+            "confirmAndSchedule": "Confirm & Schedule"
+        },
+        "widgets": {
+            "todayAppointments": "Today's Appointments",
+            "queueStatus": "In Queue",
+            "patientsToday": "Patients Today",
+            "viewAll": "View All",
+            "manageQueue": "Manage Queue",
+            "viewPatients": "View Patients",
+            "quickActions": "Quick Actions",
+            "newAppointment": "New Appointment",
+            "registerPatient": "Register Patient",
+            "billing": "Billing",
+            "todaySummary": "Today's Summary",
+            "completedAppointments": "Completed Appointments",
+            "pendingAppointments": "Pending Appointments",
+            "newPatients": "New Patients Today"
+        },
+        "editProfile": "Edit Profile",
+        "noBio": "No biography added yet."
+    },
+    "staffProfile": {
+        "title": "Edit Profile",
+        "subtitle": "Update your account information",
+        "username": "Username",
+        "usernamePlaceholder": "Enter your username",
+        "email": "Email Address",
+        "emailPlaceholder": "Enter your email",
+        "changePassword": "Change Password",
+        "passwordHint": "Leave blank to keep your current password",
+        "currentPassword": "Current Password",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm New Password",
+        "save": "Save Changes",
+        "cancel": "Cancel",
+        "success": {
+            "saved": "Profile updated successfully"
+        },
+        "error": {
+            "saveFailed": "Failed to update profile",
+            "usernameRequired": "Username is required",
+            "invalidEmail": "Invalid email address",
+            "currentPasswordRequired": "Current password is required to change password",
+            "passwordMismatch": "New passwords do not match",
+            "passwordTooShort": "Password must be at least 6 characters"
+        }
+    },
+    "adminTools": {
+        "title": "User Management",
+        "subtitle": "Create and manage user accounts",
+        "addUser": "Add User",
+        "searchPlaceholder": "Search by username or email...",
+        "roleFilter": {
+            "all": "All Roles"
+        },
+        "table": {
+            "user": "User",
+            "name": "Name",
+            "email": "Email",
+            "role": "Role",
+            "status": "Account Status",
+            "actions": "Actions",
+            "noUsers": "No users found",
+            "noUsersDesc": "Create a new user or adjust your filters."
+        },
+        "status": {
+            "active": "Enabled",
+            "inactive": "Disabled"
+        },
+        "actions": {
+            "filter": "Filter",
+            "edit": "Edit User",
+            "resetPassword": "Reset Password",
+            "deactivate": "Deactivate User",
+            "activate": "Activate",
+            "delete": "Delete"
+        },
+        "modal": {
+            "deactivateTitle": "Deactivate User?",
+            "activateTitle": "Activate User?",
+            "deleteTitle": "Delete User?",
+            "confirmDeactivate": "Are you sure you want to deactivate",
+            "confirmActivate": "Are you sure you want to activate",
+            "confirmDelete": "Are you sure you want to permanently delete",
+            "deactivateWarning": "They will no longer be able to log in.",
+            "deleteWarning": "This action cannot be undone.",
+            "cancel": "Cancel",
+            "deactivate": "Deactivate",
+            "activate": "Activate",
+            "delete": "Delete"
+        },
+        "resetPassword": {
+            "title": "Reset Password",
+            "newPasswordFor": "New password for",
+            "setNewPasswordFor": "Set a new password for",
+            "copy": "Copy to clipboard",
+            "warning": "Please share this password securely with the user.",
+            "done": "Done",
+            "label": "New Password",
+            "generate": "Generate",
+            "lengthWarning": "Password must be at least 8 characters long."
+        }
+    },
+    "queueDashboard": {
+        "title": "Appointments",
+        "header": "Appointment Schedule",
+        "subtitle": "Manage incoming requests and walk-in patients",
+        "filter": {
+            "all": "All Statuses",
+            "pending": "Pending",
+            "contacted": "Contacted",
+            "confirmed": "Confirmed",
+            "cancelled": "Cancelled",
+            "completed": "Completed"
+        },
+        "table": {
+            "requestId": "Request ID",
+            "patient": "Patient",
+            "contact": "Contact",
+            "date": "Preferred Date",
+            "service": "Service",
+            "dentist": "Dentist",
+            "status": "Status",
+            "actions": "Actions",
+            "noData": "No appointment requests found matching your criteria."
+        },
+        "actions": {
+            "view": "View Details",
+            "update": "Update Status",
+            "call": "Call Patient"
+        },
+        "pagination": "Page {{page}} of {{total}}",
+        "newWalkin": "Create New"
+    },
+    "calendarPage": {
+        "title": "Queue Management",
+        "header": "Queue Management",
+        "subtitle": "Confirmed appointments with assigned dentists",
+        "filterDentist": "All Dentists",
+        "newAppointment": "New Appointment"
+    },
+    "patientsPage": {
+        "title": "Patient Records",
+        "subtitle": "Manage patient profiles and medical history",
+        "newPatient": "New Patient",
+        "searchPlaceholder": "Search by HN, Name, Phone, or Email...",
+        "search": "Search",
+        "noData": "No patients found",
+        "noDataDesc": "Try adjusting your search terms or add a new patient.",
+        "table": {
+            "hn": "HN",
+            "name": "Patient Name",
+            "ageGender": "Age/Gender",
+            "contact": "Contact",
+            "registered": "Registered",
+            "actions": "Actions"
+        },
+        "modal": {
+            "createTitle": "Register New Patient",
+            "editTitle": "Edit Patient Record",
+            "deleteTitle": "Confirm Deactivation",
+            "deleteConfirm": "Are you sure you want to deactivate the patient record for",
+            "deleteWarning": "This action will hide the patient from lists but preserve historical data.",
+            "cancel": "Cancel",
+            "deactivate": "Deactivate Patient"
+        }
+    },
+    "treatmentCharting": {
+        "title": "Treatment Charting",
+        "selectPatient": "Select a patient to view/add records",
+        "searchPlaceholder": "Enter patient name or HN...",
+        "search": "Search",
+        "searching": "Searching...",
+        "noPatientsFound": "No patients found",
+        "noPatientSelected": "No patient selected",
+        "noPatientDesc": "Please use the search bar above to find a patient and manage their treatment records.",
+        "medicalHistory": "Medical History",
+        "allergies": "Allergies",
+        "addTreatment": "Add Treatment",
+        "totalValue": "Total Treatment Value",
+        "totalValueDesc": "Total estimated cost for recorded treatments",
+        "history": "Treatment History",
+        "loading": "Loading history...",
+        "noHistory": "No treatment history found for this patient",
+        "todaysQueue": "Today's Queue",
+        "todaysQueueDesc": "Click on a patient to start treatment",
+        "patients": "patients",
+        "noQueueToday": "No appointments scheduled for today",
+        "table": {
+            "date": "Date",
+            "procedures": "Procedures",
+            "teeth": "Teeth",
+            "dentist": "Dentist",
+            "status": "Status",
+            "cost": "Cost",
+            "actions": "Actions"
+        },
+        "actions": {
+            "view": "View Details",
+            "edit": "Edit"
+        },
+        "createInvoice": "Create Invoice"
+    },
+    "serviceManagement": {
+        "title": "Service Management",
+        "subtitle": "Manage dental services and pricing",
+        "addService": "Add Service",
+        "searchPlaceholder": "Search services...",
+        "filter": "Filter",
+        "noServices": "No services found",
+        "noServicesDesc": "Create a new service or adjust your filters.",
+        "minutes": "min",
+        "category": {
+            "all": "All Categories",
+            "general": "General",
+            "cosmetic": "Cosmetic",
+            "orthodontics": "Orthodontics",
+            "surgical": "Surgical",
+            "preventive": "Preventive",
+            "restorative": "Restorative",
+            "pediatric": "Pediatric"
+        },
+        "table": {
+            "name": "Service Name",
+            "category": "Category",
+            "price": "Base Price",
+            "duration": "Duration",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "status": {
+            "active": "Active",
+            "inactive": "Inactive"
+        },
+        "actions": {
+            "edit": "Edit",
+            "enable": "Enable",
+            "disable": "Disable",
+            "delete": "Delete"
+        },
+        "form": {
+            "name": "Service Name (English)",
+            "nameTh": "Service Name (Thai)",
+            "description": "Description (English)",
+            "descriptionTh": "Description (Thai)",
+            "category": "Category",
+            "basePrice": "Base Price (THB)",
+            "duration": "Duration (minutes)",
+            "sortOrder": "Sort Order",
+            "active": "Active"
+        },
+        "modal": {
+            "createTitle": "Add New Service",
+            "editTitle": "Edit Service",
+            "deleteTitle": "Delete Service?",
+            "deleteConfirm": "Are you sure you want to delete",
+            "deleteWarning": "This action cannot be undone.",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "create": "Create Service",
+            "save": "Save Changes"
+        },
+        "success": {
+            "created": "Service created successfully",
+            "updated": "Service updated successfully",
+            "deleted": "Service deleted successfully",
+            "enabled": "Service enabled",
+            "disabled": "Service disabled"
+        },
+        "error": {
+            "loadFailed": "Failed to load services",
+            "saveFailed": "Failed to save service",
+            "deleteFailed": "Failed to delete service",
+            "toggleFailed": "Failed to toggle service status"
+        }
+    },
+    "dentistProfile": {
+        "title": "Dentist Profile",
+        "section": {
+            "basicInfo": "Basic Information",
+            "specializations": "Specializations",
+            "services": "Services Offered",
+            "certificates": "Certificates & Licenses",
+            "education": "Education",
+            "schedule": "Working Schedule",
+            "bio": "Professional Bio"
+        },
+        "form": {
+            "licenseNumber": "License Number",
+            "consultationFee": "Consultation Fee (THB)",
+            "addCertificate": "Add Certificate",
+            "addEducation": "Add Education",
+            "certName": "Certificate Name",
+            "issuedBy": "Issued By",
+            "degree": "Degree",
+            "institution": "Institution",
+            "year": "Year",
+            "noCertificates": "No certificates added yet",
+            "noEducation": "No education records added yet",
+            "availableDays": "Available Days",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "bio": "Bio",
+            "experience": "Experience"
+        },
+        "save": "Save Profile",
+        "cancel": "Cancel",
+        "editProfile": "Edit Dentist Profile",
+        "success": {
+            "saved": "Dentist profile saved successfully"
+        },
+        "error": {
+            "loadFailed": "Failed to load profile data",
+            "saveFailed": "Failed to save profile"
+        }
+    },
+    "dentistDashboard": {
+        "todaysAppointments": "Today's Appointments",
+        "nextPatient": "Next Patient",
+        "workSchedule": "Work Schedule",
+        "quickActions": "Quick Actions",
+        "editProfile": "Edit Profile",
+        "noAppointments": "No appointments today",
+        "viewCalendar": "View Calendar",
+        "startTreatment": "Start Treatment",
+        "waitingQueue": "Waiting Queue"
+    },
+    "common": {
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "save": "Save",
+        "checkIn": "Check In",
+        "print": "Print"
+    },
+    "receipt": {
+        "detailsTitle": "Receipt Details"
+    },
+    "dentistAppointments": {
+        "title": "My Appointments",
+        "header": "My Appointments",
+        "subtitle": "View and manage your scheduled appointments",
+        "viewDay": "Day",
+        "viewWeek": "Week",
+        "viewCalendar": "Calendar",
+        "viewMonth": "Month",
+        "today": "Today",
+        "totalAppointments": "Total",
+        "appointments": "appointments",
+        "noAppointments": "No appointments",
+        "noAppointmentsDay": "You have no appointments scheduled for this day.",
+        "noAppointmentsWeek": "You have no appointments scheduled for this week.",
+        "notes": "Notes",
+        "startTreatment": "Start Treatment",
+        "treat": "Treat",
+        "call": "Call",
+        "status": {
+            "scheduled": "Scheduled",
+            "confirmed": "Confirmed",
+            "inProgress": "In Progress",
+            "completed": "Completed",
+            "cancelled": "Cancelled",
+            "noShow": "No Show"
+        }
+    },
+    "createModal": {
+        "title": "Create Invoice",
+        "step1": "Step 1: Select Patient",
+        "step2": "Step 2: Select Treatments for {{name}}",
+        "step1Title": "Select Patient",
+        "step2Title": "Select Treatments",
+        "step3Title": "Review & Create Invoice",
+        "searchPlaceholder": "Search patient by name or HN...",
+        "searchBtn": "Search",
+        "searchResults": "Search Results",
+        "searchHint": "Search for a patient by name or HN",
+        "recentPatients": "Recent Patients",
+        "changePatient": "Change Patient",
+        "loadingTreatments": "Loading treatments...",
+        "selectTreatments": "Select Treatments to Invoice",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "noTreatments": "No treatments found for this patient.",
+        "noTreatmentsDesc": "This patient has no treatments pending invoice.",
+        "subtotal": "Subtotal",
+        "discount": "Discount",
+        "enableVat": "Include VAT (7%)",
+        "vat": "VAT (7%)",
+        "total": "Total",
+        "cancel": "Cancel",
+        "back": "Back",
+        "reviewBtn": "Review",
+        "create": "Create Invoice",
+        "creating": "Creating...",
+        "errorSelect": "Please select at least one treatment",
+        "invoiceFor": "Invoice for",
+        "itemCount": "Item Count",
+        "items": "items",
+        "itemsIncluded": "Items Included in Invoice",
+        "successTitle": "Invoice Created Successfully!",
+        "successDesc": "Closing window..."
+    }
+}
