@@ -118,3 +118,38 @@ exports.refresh = async (req, res) => {
         return res.status(500).json({ message: 'An error occurred. Please try again later.' });
     }
 };
+
+// Token blacklist for invalidated tokens (in-memory for now)
+// TODO: In production, use Redis or database for persistence across restarts
+const tokenBlacklist = new Set();
+
+exports.logout = async (req, res) => {
+    try {
+        const { refreshToken } = req.body;
+        const userId = req.user.userId;
+        const username = req.user.username;
+
+        // Add refresh token to blacklist if provided
+        if (refreshToken) {
+            tokenBlacklist.add(refreshToken);
+        }
+
+        logger.info(`User logged out: ${username}`, {
+            userId,
+            timestamp: new Date().toISOString()
+        });
+
+        return res.status(200).json({
+            success: true,
+            message: 'Logged out successfully'
+        });
+    } catch (error) {
+        logger.error(`Logout error: ${error.message}`, { stack: error.stack });
+        return res.status(500).json({ message: 'An error occurred during logout.' });
+    }
+};
+
+// Helper function to check if token is blacklisted
+exports.isTokenBlacklisted = (token) => {
+    return tokenBlacklist.has(token);
+};

@@ -9,6 +9,9 @@ router.post('/login', authController.login);
 // Refresh Token Route
 router.post('/refresh', authController.refresh);
 
+// Logout Route - Invalidates refresh token
+router.post('/logout', authenticate, authController.logout);
+
 // Protected Route for Testing/User Info
 router.get('/me', authenticate, (req, res) => {
     res.json({ user: req.user });

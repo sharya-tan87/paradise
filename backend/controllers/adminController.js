@@ -1,6 +1,7 @@
 const { User } = require('../models');
 const { Op } = require('sequelize');
 const { generateTempPassword } = require('../utils/passwordGenerator');
+const logger = require('../utils/logger');
 
 // Role hierarchy levels (Must match authorizeRole.js)
 const ROLE_HIERARCHY = {
@@ -87,7 +88,7 @@ exports.listUsers = async (req, res) => {
 
         res.json(users);
     } catch (error) {
-        console.error('Error listing users:', error);
+        logger.error('Error listing users:', error);
         res.status(500).json({ error: 'Failed to list users' });
     }
 };
@@ -149,7 +150,7 @@ exports.createUser = async (req, res) => {
             active: user.active
         });
     } catch (error) {
-        console.error('Error creating user:', error);
+        logger.error('Error creating user:', error);
         res.status(500).json({ error: 'Failed to create user' });
     }
 };
@@ -213,7 +214,7 @@ exports.updateUser = async (req, res) => {
             active: user.active
         });
     } catch (error) {
-        console.error('Error updating user:', error);
+        logger.error('Error updating user:', error);
         res.status(500).json({ error: 'Failed to update user' });
     }
 };
@@ -243,7 +244,7 @@ exports.deactivateUser = async (req, res) => {
 
         res.json({ message: 'User deactivated successfully', id: user.id });
     } catch (error) {
-        console.error('Error deactivating user:', error);
+        logger.error('Error deactivating user:', error);
         res.status(500).json({ error: 'Failed to deactivate user' });
     }
 };
@@ -268,7 +269,7 @@ exports.activateUser = async (req, res) => {
 
         res.json({ message: 'User activated successfully', id: user.id });
     } catch (error) {
-        console.error('Error activating user:', error);
+        logger.error('Error activating user:', error);
         res.status(500).json({ error: 'Failed to activate user' });
     }
 };
@@ -308,7 +309,11 @@ exports.resetPassword = async (req, res) => {
 
         // SECURITY FIX: Never return passwords in API responses
         // Log for audit trail (without the actual password)
-        console.log(`Password reset for user: ${user.username} by admin: ${req.user.username}`);
+        logger.info('Password reset performed', {
+            targetUser: user.username,
+            adminUser: req.user.username,
+            timestamp: new Date().toISOString()
+        });
 
         // In production, send password via secure email instead
         // For now, return success message only
@@ -322,7 +327,7 @@ exports.resetPassword = async (req, res) => {
             _devOnly_tempPassword: process.env.NODE_ENV === 'development' ? tempPassword : undefined
         });
     } catch (error) {
-        console.error('Error resetting password:', error);
+        logger.error('Error resetting password:', error);
         res.status(500).json({ error: 'Failed to reset password' });
     }
 };
@@ -351,7 +356,7 @@ exports.deleteUser = async (req, res) => {
 
         res.json({ message: 'User deleted successfully', id: user.id });
     } catch (error) {
-        console.error('Error deleting user:', error);
+        logger.error('Error deleting user:', error);
         res.status(500).json({ error: 'Failed to delete user. Check for dependent records.' });
     }
 };

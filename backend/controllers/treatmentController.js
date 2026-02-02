@@ -1,5 +1,6 @@
 const { Treatment, User, Patient, Appointment, Invoice } = require('../models');
 const { Op } = require('sequelize');
+const logger = require('../utils/logger');
 
 exports.getTreatments = async (req, res) => {
     try {
@@ -48,7 +49,7 @@ exports.getTreatments = async (req, res) => {
 
         res.json(treatments);
     } catch (error) {
-        console.error('Error fetching treatments:', error);
+        logger.error('Error fetching treatments', { error: error.message });
         res.status(500).json({ message: 'Failed to fetch treatments' });
     }
 };
@@ -77,7 +78,7 @@ exports.getTreatmentDetails = async (req, res) => {
 
         res.json(treatment);
     } catch (error) {
-        console.error('Error fetching treatment details:', error);
+        logger.error('Error fetching treatment details', { id: req.params.id, error: error.message });
         res.status(500).json({ message: 'Failed to fetch treatment details' });
     }
 };
@@ -97,7 +98,11 @@ exports.createTreatment = async (req, res) => {
             status
         } = req.body;
 
-        console.log('Creating treatment for patient:', patientHN, 'by user:', req.user.userId);
+        // Log without exposing PHI (patient HN is internal identifier, acceptable for audit)
+        logger.info('Treatment creation initiated', {
+            userId: req.user.userId,
+            patientHN: patientHN  // HN is internal ID, not PHI
+        });
 
         // Validation - ensure patient exists
         const patient = await Patient.findOne({ where: { hn: patientHN } });
@@ -129,12 +134,19 @@ exports.createTreatment = async (req, res) => {
         };
 
         const treatment = await Treatment.create(treatmentData);
+
+        logger.info('Treatment created', {
+            treatmentId: treatment.id,
+            patientHN: patientHN,
+            performedBy: dentistId
+        });
+
         res.status(201).json(treatment);
     } catch (error) {
-        console.error('Error creating treatment:', error);
+        logger.error('Error creating treatment', { error: error.message });
         res.status(500).json({
             message: 'Failed to create treatment',
-            details: error.message
+            details: process.env.NODE_ENV === 'development' ? error.message : undefined
         });
     }
 };
@@ -148,11 +160,19 @@ exports.updateTreatment = async (req, res) => {
             return res.status(404).json({ message: 'Treatment not found' });
         }
 
-        // Permission check: Admin or Creator (Dentist)
+        // Permission check: Admin, Manager, or Creator (Dentist who performed the treatment)
         const isCreator = req.user.userId === treatment.performedBy;
         const isAdmin = req.user.role === 'admin';
+        const isManager = req.user.role === 'manager';
 
-        if (!isCreator && !isAdmin) {
+        // SECURITY FIX: Only admin, manager, or the treating dentist can modify
+        if (!isCreator && !isAdmin && !isManager) {
+            logger.warn('Unauthorized treatment update attempt', {
+                userId: req.user.userId,
+                userRole: req.user.role,
+                treatmentId: id,
+                originalPerformedBy: treatment.performedBy
+            });
             return res.status(403).json({ message: 'Unauthorized to edit this treatment' });
         }
 
@@ -178,9 +198,14 @@ exports.updateTreatment = async (req, res) => {
             status
         });
 
+        logger.info('Treatment updated', {
+            treatmentId: id,
+            updatedBy: req.user.userId
+        });
+
         res.json(treatment);
     } catch (error) {
-        console.error('Error updating treatment:', error);
+        logger.error('Error updating treatment', { id: req.params.id, error: error.message });
         res.status(500).json({ message: 'Failed to update treatment' });
     }
 };

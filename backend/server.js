@@ -37,9 +37,21 @@ app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 
 // ==================== SECURITY MIDDLEWARE ====================
 
-// Helmet: Set security HTTP headers
+// Helmet: Set security HTTP headers with proper CSP
 app.use(helmet({
-    contentSecurityPolicy: false,
+    contentSecurityPolicy: isProduction ? {
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'"],
+            styleSrc: ["'self'", "'unsafe-inline'"],  // Allow inline styles for UI frameworks
+            imgSrc: ["'self'", "data:", "blob:"],
+            fontSrc: ["'self'"],
+            connectSrc: ["'self'", process.env.FRONTEND_URL].filter(Boolean),
+            frameSrc: ["'none'"],
+            objectSrc: ["'none'"],
+            upgradeInsecureRequests: []
+        }
+    } : false,  // Disable CSP in development for easier debugging
     crossOriginEmbedderPolicy: false,
     crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
