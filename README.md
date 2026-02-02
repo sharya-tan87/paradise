@@ -60,3 +60,4 @@ A comprehensive management system for Paradise Dental Clinic, featuring a React 
 - `frontend/`: React application.
 - `backend/`: Express API.
 - `docs/`: Documentation.
+# Deployment test - Mon Feb  2 20:43:42 +07 2026
