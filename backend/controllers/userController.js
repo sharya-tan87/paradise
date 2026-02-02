@@ -34,10 +34,11 @@ const listUsers = async (req, res) => {
 const updateUserProfile = async (req, res) => {
     try {
         const { id } = req.params;
-        const userId = req.user.id;
+        // SECURITY FIX: JWT token uses 'userId' not 'id'
+        const userId = req.user.userId;
 
-        // Users can only update their own profile
-        if (id !== userId) {
+        // Users can only update their own profile (compare as strings for safety)
+        if (String(id) !== String(userId)) {
             return res.status(403).json({
                 success: false,
                 error: 'You can only update your own profile'

@@ -306,11 +306,20 @@ exports.resetPassword = async (req, res) => {
         const password_hash = await User.hashPassword(tempPassword);
         await user.update({ password_hash });
 
-        // Return temp password to admin (display once only)
+        // SECURITY FIX: Never return passwords in API responses
+        // Log for audit trail (without the actual password)
+        console.log(`Password reset for user: ${user.username} by admin: ${req.user.username}`);
+
+        // In production, send password via secure email instead
+        // For now, return success message only
+        // TODO: Implement email notification with temporary password
         res.json({
-            message: 'Password reset successfully',
-            temporaryPassword: tempPassword,
-            username: user.username
+            message: 'Password reset successfully. Please contact administrator for the new password.',
+            username: user.username,
+            passwordWasGenerated: !newPassword,
+            // IMPORTANT: Password should be delivered via secure channel (email, in-person)
+            // Remove this line in production after implementing email delivery:
+            _devOnly_tempPassword: process.env.NODE_ENV === 'development' ? tempPassword : undefined
         });
     } catch (error) {
         console.error('Error resetting password:', error);

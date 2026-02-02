@@ -78,6 +78,18 @@ const listPatients = async (req, res) => {
             order: [['created_at', 'DESC']]
         });
 
+        // HIPAA COMPLIANCE: Audit log for PHI access
+        logger.info('PHI_ACCESS: Patient list viewed', {
+            userId: req.user?.userId,
+            username: req.user?.username,
+            role: req.user?.role,
+            action: 'LIST_PATIENTS',
+            recordCount: rows.length,
+            searchUsed: !!search,
+            ipAddress: req.ip || req.connection?.remoteAddress,
+            timestamp: new Date().toISOString()
+        });
+
         return res.status(200).json({
             success: true,
             data: rows,
@@ -105,11 +117,31 @@ const getPatient = async (req, res) => {
         });
 
         if (!patient) {
+            // Log failed access attempts too (potential enumeration attack)
+            logger.warn('PHI_ACCESS: Patient not found (potential enumeration)', {
+                userId: req.user?.userId,
+                username: req.user?.username,
+                attemptedHN: hn,
+                ipAddress: req.ip || req.connection?.remoteAddress,
+                timestamp: new Date().toISOString()
+            });
             return res.status(404).json({
                 success: false,
                 message: 'Patient not found'
             });
         }
+
+        // HIPAA COMPLIANCE: Audit log for PHI access
+        logger.info('PHI_ACCESS: Patient record viewed', {
+            userId: req.user?.userId,
+            username: req.user?.username,
+            role: req.user?.role,
+            action: 'VIEW_PATIENT',
+            patientHN: hn,
+            patientId: patient.id,
+            ipAddress: req.ip || req.connection?.remoteAddress,
+            timestamp: new Date().toISOString()
+        });
 
         return res.status(200).json({
             success: true,
