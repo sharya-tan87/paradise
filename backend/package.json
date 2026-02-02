@@ -7,7 +7,12 @@
     "test": "echo \"No test specified, passing for CI\" && exit 0",
     "start": "NODE_ENV=production node server.js",
     "dev": "NODE_ENV=development nodemon server.js",
-    "start:dev": "NODE_ENV=development node server.js"
+    "start:dev": "NODE_ENV=development node server.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "migrate:status": "npx sequelize-cli db:migrate:status",
+    "seed": "npx sequelize-cli db:seed:all",
+    "build": "npm run migrate"
   },
   "keywords": [
     "dental",
