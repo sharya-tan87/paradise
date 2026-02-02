@@ -109,10 +109,10 @@ jobs:
         continue-on-error: true
 
   # ============================================
-  # Deploy (only on main branch push)
+  # Deploy to Railway (only on main branch push)
   # ============================================
   deploy:
-    name: Deploy to Production
+    name: Deploy to Railway
     needs: [backend, frontend, security]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -121,21 +121,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Download frontend build
-        uses: actions/download-artifact@v4
-        with:
-          name: frontend-build
-          path: ./frontend/dist
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
 
-      # Add your deployment steps here
-      # Examples:
-      # - Deploy to Render
-      # - Deploy to Railway
-      # - Deploy to Vercel
-      # - Deploy to AWS
+      - name: Deploy Backend to Railway
+        run: railway up --service backend
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
-      - name: Deployment placeholder
+      - name: Deploy Frontend to Railway
+        run: railway up --service frontend
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+      - name: Deployment Success
         run: |
-          echo "🚀 Ready to deploy!"
-          echo "Configure your deployment target in this workflow."
-          echo "Options: Render, Railway, Vercel, AWS, etc."
+          echo "✅ Deployment to Railway complete!"
+          echo "Backend: https://paradise-backend.up.railway.app"
+          echo "Frontend: https://paradise-frontend.up.railway.app"
