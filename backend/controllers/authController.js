@@ -71,10 +71,10 @@ exports.refresh = async (req, res) => {
             return res.status(400).json({ message: 'Refresh token required' });
         }
 
-        // Verify token
+        // Verify token with algorithm restriction (security fix)
         let decoded;
         try {
-            decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET);
+            decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET, { algorithms: ['HS256'] });
         } catch (err) {
             logger.warn('Refresh token verification failed');
             return res.status(401).json({ message: 'Invalid refresh token' });

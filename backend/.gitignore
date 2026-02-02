@@ -1,0 +1,63 @@
+# ===========================================
+# Paradise Dental Backend - Git Ignore
+# ===========================================
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+.nyc_output/
+
+# Build output
+dist/
+build/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Uploads (if stored locally)
+uploads/
+temp/
+
+# Database files (local SQLite if used)
+*.sqlite
+*.sqlite3
+*.db
+
+# Test files
+*.test.js.snap
+
+# Misc
+.cache/

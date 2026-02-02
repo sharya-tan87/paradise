@@ -12,61 +12,62 @@ const {
 const authenticate = require('../middleware/authenticate');
 const authorizeRole = require('../middleware/authorizeRole');
 
-// All routes are protected and restricted to admin ONLY
+// All routes are protected and restricted to admin/manager roles
+// SECURITY FIX: Removed 'staff' from admin routes - privilege escalation vulnerability
 
-// GET /api/admin/users
+// GET /api/admin/users - Admin and Manager can view users
 router.get(
     '/users',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin', 'manager']),
     listUsers
 );
 
-// POST /api/admin/users
+// POST /api/admin/users - Only Admin can create users
 router.post(
     '/users',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin']),
     createUser
 );
 
-// PATCH /api/admin/users/:id
+// PATCH /api/admin/users/:id - Admin and Manager can update users
 router.patch(
     '/users/:id',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin', 'manager']),
     updateUser
 );
 
-// DELETE /api/admin/users/:id (deactivate)
+// DELETE /api/admin/users/:id (deactivate) - Admin and Manager can deactivate
 router.delete(
     '/users/:id',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin', 'manager']),
     deactivateUser
 );
 
-// POST /api/admin/users/:id/activate
+// POST /api/admin/users/:id/activate - Admin and Manager can activate
 router.post(
     '/users/:id/activate',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin', 'manager']),
     activateUser
 );
 
-// POST /api/admin/users/:id/reset-password
+// POST /api/admin/users/:id/reset-password - Only Admin can reset passwords
 router.post(
     '/users/:id/reset-password',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin']),
     resetPassword
 );
 
-// DELETE /api/admin/users/:id/hard-delete (permanent delete)
+// DELETE /api/admin/users/:id/hard-delete (permanent delete) - Only Admin
 router.delete(
     '/users/:id/hard-delete',
     authenticate,
-    authorizeRole(['admin', 'manager', 'staff']),
+    authorizeRole(['admin']),
     deleteUser
 );
 
